@@ -1,0 +1,15 @@
+nav{
+    text-align: center;
+    background: #00224D;
+    width: 100%;
+    height: 10vh;
+    align-content: center;
+    font-size: 10vh;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 2vh;
+    color: #fff;
+}
+nav span{
+  font-family: "Love Ya Like A Sister", cursive;
+}

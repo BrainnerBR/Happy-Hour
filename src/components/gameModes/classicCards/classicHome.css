@@ -1,0 +1,57 @@
+.classicHomeContainer{
+    background: #A0153E ;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+.classicHomeContainer a{
+    font-size: 8vh;
+    text-decoration: none;
+    padding: 1vh;
+    color: #00224D ;
+    cursor: pointer;
+}
+.classicCardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    background: #00224D;
+    border-radius: 10px;
+    margin: 2.9vh;
+  }
+  .classicCard {
+    width: 300px; /* Ancho de la tarjeta */
+    height: 400px; /* Altura de la tarjeta */
+    border: 1px solid #FF204E;
+    border-radius: 10px;
+    margin: 2vh;
+    height: 60vh;
+    text-align: center;
+  }
+  .classicCard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .title,
+  .cardSentence {
+    margin: 4vh 0;
+    font-size: 4vh;
+    color: #FF204E;
+  }
+  .cardSentence{
+    font-size: 3vh;
+  }
+  .classicIcon{
+    font-size: 15vh;
+    color: #FF204E;
+    padding-top: 2vh;
+  }
+  .nextBtnContainer{
+    text-align: center;
+  }
+  .nextBtnContainer a{
+    font-size: 15vh;
+  }
