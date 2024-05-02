@@ -7,6 +7,7 @@ import './index.css'
 import ClassicHome from './components/gameModes/classicCards/ClassicHome';
 import VerdadShotHome from './components/gameModes/verdadoShot/VerdadShotHome';
 import YoNuncaNunca from './components/gameModes/yoNuncaNunca/YoNuncaNunca';
+import ChillMode from './components/modes/familyFriendly/ChillMode';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/classic" element={<ClassicHome />} />
         <Route path="/verdadoshot" element={<VerdadShotHome />} />
         <Route path="/yonuncanunca" element={<YoNuncaNunca />} />
+        <Route path="/chillHome" element={<ChillMode />} />
       </Routes>
     </Router>
   </React.StrictMode>
