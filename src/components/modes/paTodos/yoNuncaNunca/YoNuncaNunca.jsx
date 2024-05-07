@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import './verdadShot.css';
 import { Link } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
-import { verdadShotCards } from './VerdadShotCards';
+import { yoNuncaNuncaCardsData } from './YoNuncaNuncaCards';
 import { GiCardExchange } from "react-icons/gi";
 
-const VerdadShotHome = () => {
+const YoNuncaNunca = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [usedCardIndexes, setUsedCardIndexes] = useState([]);
 
   const getRandomIndex = () => {
-    const remainingIndexes = verdadShotCards
+    const remainingIndexes = yoNuncaNuncaCardsData
       .map((_, index) => index)
       .filter(index => !usedCardIndexes.includes(index));
     const randomIndex = Math.floor(Math.random() * remainingIndexes.length);
@@ -18,7 +17,7 @@ const VerdadShotHome = () => {
   };
 
   const handleNextCard = () => {
-    if (usedCardIndexes.length === verdadShotCards.length) {
+    if (usedCardIndexes.length === yoNuncaNuncaCardsData.length) {
       // Si no hay más tarjetas disponibles, no hacer nada
       return;
     }
@@ -28,11 +27,11 @@ const VerdadShotHome = () => {
     setCurrentCardIndex(randomIndex);
   };
 
-  const currentCard = verdadShotCards[currentCardIndex];
+  const currentCard = yoNuncaNuncaCardsData[currentCardIndex];
 
   return (
-    <div className='classicHomeContainer'>
-      <Link to='/'>
+    <div className='homeContainer'>
+      <Link to='/paTodos'>
         <MdKeyboardBackspace />
       </Link>
       <div className='classicCardsContainer'>
@@ -54,4 +53,4 @@ const VerdadShotHome = () => {
   );
 };
 
-export default VerdadShotHome;
+export default YoNuncaNunca;

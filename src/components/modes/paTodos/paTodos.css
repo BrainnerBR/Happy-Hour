@@ -1,0 +1,114 @@
+.paTodosHomeContainer{
+    background: #CDE8E5;
+    height: 65vh;
+    text-align: center;
+    margin: 0;
+}
+.btnGamemodeContainer{
+    text-align: -webkit-center;
+}
+.homeIconContainerPaTodos{
+  padding-top: 5vh;
+  margin: 0;
+  background: #CDE8E5;
+  width: 100%;
+  text-align: center;
+
+}
+.homeIcon{
+  font-size: 7vh;
+  color: #FF204E;
+}
+.gamemodeLogo h1{
+  color: #FF204E;
+}
+.homeContainer{
+  background: #CDE8E5 ;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+.homeContainer a{
+  font-size: 8vh;
+  text-decoration: none;
+  padding: 1vh;
+  color: #00224D ;
+  cursor: pointer;
+}
+.classicCardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  background: #00224D;
+  border-radius: 10px;
+  margin: 2.9vh;
+}
+.classicCard {
+  width: 300px; /* Ancho de la tarjeta */
+  height: 400px; /* Altura de la tarjeta */
+  border: 1px solid #FF204E;
+  border-radius: 10px;
+  margin: 2vh;
+  height: 60vh;
+  text-align: center;
+}
+.classicCard img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.title,
+.cardSentence {
+  margin: 4vh 0;
+  font-size: 4vh;
+  color: #FF204E;
+}
+.cardSentence{
+  font-size: 4vh;
+}
+.classicIcon{
+  font-size: 15vh;
+  color: #FF204E;
+  padding-top: 2vh;
+}
+.nextBtnContainer{
+  text-align: center;
+}
+.nextBtnContainer a{
+  font-size: 15vh;
+}
+
+.button-86 {
+  width: 35vh;
+  height: 5rem; 
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 4vh;
+  background: #00224D;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  box-shadow: 0 4px 6px #FF204E;
+
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

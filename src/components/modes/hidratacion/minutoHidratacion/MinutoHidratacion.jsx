@@ -1,16 +1,43 @@
-import React, { useState } from 'react';
-import './classicHome.css';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
-import { classicCardsData } from './ClassicCards';
+import { MinutoHidratacionData } from './minutoHidratacionData';
 import { GiCardExchange } from "react-icons/gi";
+import './countdown'
 
-const ClassicHome = () => {
+const MinutoHidratacion = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [usedCardIndexes, setUsedCardIndexes] = useState([]);
 
+  useEffect(() => {
+    const timerElement = document.getElementById('timer');
+    let totalTime = 60;
+
+    function updateTimer() {
+      const minutes = Math.floor(totalTime / 60);
+      let seconds = totalTime % 60;
+      if (seconds < 10) {
+          seconds = '0' + seconds;
+      }
+      timerElement.textContent = minutes + ':' + seconds;
+      totalTime--;
+
+      if (totalTime < 0) {
+          clearInterval(timerInterval);
+          timerElement.textContent = '0:00';
+      }
+    }
+
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    return () => {
+      // Limpiar el intervalo cuando el componente se desmonta
+      clearInterval(timerInterval);
+    };
+  }, []);
+
   const getRandomIndex = () => {
-    const remainingIndexes = classicCardsData
+    const remainingIndexes = MinutoHidratacionData
       .map((_, index) => index)
       .filter(index => !usedCardIndexes.includes(index));
     const randomIndex = Math.floor(Math.random() * remainingIndexes.length);
@@ -18,7 +45,7 @@ const ClassicHome = () => {
   };
 
   const handleNextCard = () => {
-    if (usedCardIndexes.length === classicCardsData.length) {
+    if (usedCardIndexes.length === MinutoHidratacionData.length) {
       // Si no hay más tarjetas disponibles, no hacer nada
       return;
     }
@@ -28,13 +55,16 @@ const ClassicHome = () => {
     setCurrentCardIndex(randomIndex);
   };
 
-  const currentCard = classicCardsData[currentCardIndex];
+  const currentCard = MinutoHidratacionData[currentCardIndex];
 
   return (
-    <div className='classicHomeContainer'>
-      <Link to='/'>
-        <MdKeyboardBackspace />
-      </Link>
+    <div className='hidratacionHome'>
+            <div className='minutoHidratacionTopBar'>
+        <Link to='/hidratacion'>
+            <MdKeyboardBackspace />
+        </Link>
+           <div className='countdown' id="timer">1:00</div>
+        </div>
       <div className='classicCardsContainer'>
         {currentCard ? (
           <div className='classicCard'>
@@ -54,4 +84,4 @@ const ClassicHome = () => {
   );
 };
 
-export default ClassicHome;
+export default MinutoHidratacion;

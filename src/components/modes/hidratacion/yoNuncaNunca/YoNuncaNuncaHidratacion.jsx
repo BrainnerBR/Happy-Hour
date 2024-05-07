@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
-import { yoNuncaNuncaCardsData } from './YoNuncaNuncaCards';
+import { YoNuncaNuncaHidratacionData } from './YoNuncaNuncaHidratacionData';
 import { GiCardExchange } from "react-icons/gi";
 
-const YoNuncaNunca = () => {
+const YoNuncaNuncaHidratacion = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [usedCardIndexes, setUsedCardIndexes] = useState([]);
 
   const getRandomIndex = () => {
-    const remainingIndexes = yoNuncaNuncaCardsData
+    const remainingIndexes = YoNuncaNuncaHidratacionData
       .map((_, index) => index)
       .filter(index => !usedCardIndexes.includes(index));
     const randomIndex = Math.floor(Math.random() * remainingIndexes.length);
@@ -17,7 +17,7 @@ const YoNuncaNunca = () => {
   };
 
   const handleNextCard = () => {
-    if (usedCardIndexes.length === yoNuncaNuncaCardsData.length) {
+    if (usedCardIndexes.length === YoNuncaNuncaHidratacionData.length) {
       // Si no hay más tarjetas disponibles, no hacer nada
       return;
     }
@@ -27,11 +27,11 @@ const YoNuncaNunca = () => {
     setCurrentCardIndex(randomIndex);
   };
 
-  const currentCard = yoNuncaNuncaCardsData[currentCardIndex];
+  const currentCard = YoNuncaNuncaHidratacionData[currentCardIndex];
 
   return (
-    <div className='classicHomeContainer'>
-      <Link to='/'>
+    <div className='hidratacionHome'>
+      <Link to='/hidratacion'>
         <MdKeyboardBackspace />
       </Link>
       <div className='classicCardsContainer'>
@@ -53,4 +53,4 @@ const YoNuncaNunca = () => {
   );
 };
 
-export default YoNuncaNunca;
+export default YoNuncaNuncaHidratacion;

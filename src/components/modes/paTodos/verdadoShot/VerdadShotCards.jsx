@@ -1,65 +1,64 @@
 import { BsFillPatchQuestionFill } from "react-icons/bs";
 
-
 export const verdadShotCards = [
     {
       title: 'Verdad o Shot',
-      description: 'Besaria a alguien de los presentes',
-      type: 'verdadoShot',
+      description: 'Te arrepientes de algo?',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'A quien te llevarias a una isla desierta',
-      type: 'verdadoShot',
+      description: 'A quién te llevarías a una isla desierta',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'Siendo honestos, Orinas en la ducha?',
-      type: 'verdadoShot',
+      description: 'Siendo honestos, ¿orinas en la ducha?',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'Cual es el trabajo de tu sueños',
-      type: 'verdadoShot',
+      description: 'Cuál es el trabajo de tus sueños',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'A cual amig@ le tienes mas confianza',
-      type: 'verdadoShot',
+      description: 'A cuál amigo le tienes más confianza',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'Tendrias relaciones con alguno de los presentes',
-      type: 'verdadoShot',
+      description: 'Alguna vez te gustó algún profesor',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'Cual ha sido tu mejor beso',
-      type: 'verdadoShot',
+      description: 'Cuál ha sido tu mejor beso',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'Cual ha sido tu peor beso',
-      type: 'verdadoShot',
+      description: 'Cuál ha sido tu peor beso',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
       description: 'Parte favorita de tu cuerpo',
-      type: 'verdadoShot',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
     {
       title: 'Verdad o Shot',
-      description: 'Cual es tu poscicion favorita en la cama',
-      type: 'verdadoShot',
+      description: 'Cuál es tu mayor fetiche',
+      type: 'verdadShot',
       icon: <BsFillPatchQuestionFill />,
     },
-]
+];
