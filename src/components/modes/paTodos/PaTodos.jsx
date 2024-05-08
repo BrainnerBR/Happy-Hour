@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from "../../logo/Logo.jsx";
 import './paTodos.css';
 import { Link } from 'react-router-dom';
 import { GiCardRandom } from "react-icons/gi";

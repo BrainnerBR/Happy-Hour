@@ -33,12 +33,6 @@ const Hut = () => {
               <button className="button-87" role="button">Verdad o shot <PiBeerBottleFill /></button>
             </Link>
           </div>
-
-          <div className="btnGamemodeContainer">
-            <Link to="./">
-              <button className="button-87" role="button">Game 3<TbHandOff/></button>
-            </Link>
-          </div>
         </div>
     </div>
   );

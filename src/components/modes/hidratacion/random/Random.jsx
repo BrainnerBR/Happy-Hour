@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdKeyboardBackspace } from 'react-icons/md';
-import { VerdadShotHidratacionData } from './VerdadShotHidratacionData';
+import { RandomData } from './RandomData';
 import { GiCardExchange } from "react-icons/gi";
 
-const VerdadShotHidratacion = () => {
+const Random = () => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [usedCardIndexes, setUsedCardIndexes] = useState([]);
 
   const getRandomIndex = () => {
-    const remainingIndexes = VerdadShotHidratacionData
+    const remainingIndexes = RandomData
       .map((_, index) => index)
       .filter(index => !usedCardIndexes.includes(index));
     const randomIndex = Math.floor(Math.random() * remainingIndexes.length);
@@ -17,7 +17,7 @@ const VerdadShotHidratacion = () => {
   };
 
   const handleNextCard = () => {
-    if (usedCardIndexes.length === VerdadShotHidratacionData.length) {
+    if (usedCardIndexes.length === RandomData.length) {
       // Si no hay más tarjetas disponibles, no hacer nada
       return;
     }
@@ -27,7 +27,7 @@ const VerdadShotHidratacion = () => {
     setCurrentCardIndex(randomIndex);
   };
 
-  const currentCard = VerdadShotHidratacionData[currentCardIndex];
+  const currentCard = RandomData[currentCardIndex];
 
   return (
     <div className='hidratacionHome'>
@@ -53,4 +53,4 @@ const VerdadShotHidratacion = () => {
   );
 };
 
-export default VerdadShotHidratacion;
+export default Random;

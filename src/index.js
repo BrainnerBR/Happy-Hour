@@ -14,12 +14,12 @@ import VerdadShotRompeAmistades from './components/modes/rompeAmistades/verdadoS
 import YoNuncaNuncaRompeAmistades from './components/modes/rompeAmistades/yoNuncaNuncaRompeAmistades/YoNuncaNuncaRompeAmistades';
 
 import Hidratacion from './components/modes/hidratacion/Hidratacion'
-import VerdadShotHidratacion from './components/modes/hidratacion/verdadShotHidratacion/VerdadShotHidratacion'
-import YoNuncaNuncaHidratacion from './components/modes/hidratacion/yoNuncaNunca/YoNuncaNuncaHidratacion'
+import PiensaRapido from './components/modes/hidratacion/piensaRapido/PiensaRapido'
 import MinutoHidratacion from './components/modes/hidratacion/minutoHidratacion/MinutoHidratacion';
 import Hut from './components/modes/hut/Hut';
 import NadaDebe from './components/modes/hut/nadaDebe/NadaDebe';
 import VerdadShotHut from './components/modes/hut/verdadShot/VerdadShotHut';
+import Random from './components/modes/hidratacion/random/Random';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -38,9 +38,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/rompeAmistades/yonuncanunca" element={<YoNuncaNuncaRompeAmistades/>}/>
 
         <Route path="/hidratacion/*" element={<Hidratacion />} />
-        <Route path="/hidratacion/verdadoshot" element={<VerdadShotHidratacion/>}/>
-        <Route path="/hidratacion/yonuncanunca" element={<YoNuncaNuncaHidratacion/>}/>
         <Route path="/hidratacion/minutoHidratacion" element={<MinutoHidratacion/>}/>
+        <Route path="/hidratacion/random" element={<Random/>}/>
+        <Route path="/hidratacion/piensaRapido" element={<PiensaRapido/>}/>
 
         <Route path="/hut/*" element={<Hut />} />
         <Route path='/hut/nadaDebe' element={<NadaDebe/>}/>
